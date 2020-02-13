@@ -4,21 +4,24 @@ const cron = require('./pauses.js')
 const config = require("./config.json");
 
 
-client.on('ready', () => console.log(`Logged in as ${client.user.tag}!`))
+client.on('ready', () => console.log('salut fréro'))
 
 client.on("message", message => {
   if (message.author.bot) return;
-  // This is where we'll put our code.
   if (message.content.indexOf(config.prefix) !== 0) return;
- 
+
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
- 
-  if(command === 'ping') {
-    message.channel.send('Pong!');
+
+  if (command === 'ping') {
+	message.channel.send('Pong!');
   } else
   if (command === 'git') {
-    message.channel.send('https://github.com/ypesce/Toaster-UwU');
+	message.channel.send('https://github.com/ypesce/Toaster-UwU');
+  } else
+  if (command === "delete") {
+	let [size] = args;
+	message.channel.bulkDelete(size)
   }
 });
 cron.cronPauses();
