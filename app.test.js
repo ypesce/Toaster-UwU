@@ -8,6 +8,7 @@ client.on('message', msg => {
     msg.reply('Pong!');
   }
 });
-
+import { cronPauses } from "./pauses";
+cronPauses();
 
 client.login('Njc3MTE3NjYzOTQzODUyMDMz.XkPmjA.FUVRtCSDCF-bYRyEccGzy0Eh6ls');
