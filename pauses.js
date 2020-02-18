@@ -2,7 +2,6 @@ const cron = require('node-cron');
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const config = require("./config.json")
-
     const cronPauses = () =>{
     cron.schedule('30 10 * * 1-5', () => {
         client.login(config.token).then(() => {
@@ -20,7 +19,7 @@ const config = require("./config.json")
         scheduled: true,
         timezone: "Europe/Paris"
     });
-    cron.schedule('39 14 * * 1-5', () => {
+    cron.schedule('30 14 * * 1-5', () => {
         client.login(config.token).then(() => {
             var guild = client.guilds.get('664564548132667422');
             if (guild && guild.channels.get('664564548606361602')) {
@@ -37,7 +36,7 @@ const config = require("./config.json")
         timezone: "Europe/Paris"
     });
 
-    cron.schedule('0 16 * * 1-5', () => {
+    cron.schedule('45 15 * * 1-5', () => {
         client.login(config.token).then(() => {
             var guild = client.guilds.get('664564548132667422');
             if (guild && guild.channels.get('664564548606361602')) {
