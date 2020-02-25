@@ -5,7 +5,7 @@ const config = require("./config.json")
 
 
     const cronPauses = () =>{
-    cron.schedule('30 10 * * 1-5', () => {
+    cron.schedule('32 10 * * 1-5', () => {
         client.login(config.token).then(() => {
             let guild = client.guilds.get('664564548132667422');
             if (guild && guild.channels.get('664564548606361602')) {
