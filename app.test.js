@@ -1,13 +1,15 @@
-const Discord = require('discord.js');
-const client = new Discord.Client();
+class User {
+    constructor(firstName, lastName, age, sex, friends) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.sex = sex;
+        this.friends = friends;
+    }
 
-client.on('ready', () => console.log(`Logged in as ${client.user.tag}!`))
-
-client.on('message', msg => {
-  if (msg.content === 'ping') {
-    msg.reply('Pong!');
-  }
-});
+}
 
 
-client.login('Njc3MTE3NjYzOTQzODUyMDMz.XkPmjA.FUVRtCSDCF-bYRyEccGzy0Eh6ls');
+let moi = new User("yohan", "pesce", 12, "M", ["Manu", "Natan"])
+
+console.log(moi.firstName, moi.lastName)
