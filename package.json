@@ -1,0 +1,25 @@
+{
+
+    "name": "toasteruwu",
+
+    "description": "Candid bot des saucisses fraîches",
+
+    "version": "0.1.0",
+
+    "main": "candid.js",
+
+    "scripts": {
+
+        "start": "node candid.js"
+
+    },
+
+    "dependencies": {
+
+        "discord.js": "^12.0.0",
+
+        "request": "^2.81.0"
+
+    }
+
+}
